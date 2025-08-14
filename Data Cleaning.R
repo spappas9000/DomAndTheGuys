@@ -14,4 +14,4 @@ fantasy_yty = list(
     rename(Player = Player23, ID = ID23, Pos = Pos23) %>% select(-c(Season23, Team23)),
   data2022 = fantasydata %>% filter(Season == 2022) %>% rename_with(~ paste0(., "22")) %>%
     rename(Player = Player22, ID = ID22, Pos = Pos22) %>% select(-c(Season22, Team22))
-) %>% reduce(merge, by = c("Player", "ID", "Pos"))
+) %>% reduce(merge, by = c("Player", "ID", "Pos"), all = T)
