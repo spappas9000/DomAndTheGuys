@@ -125,9 +125,6 @@ marcel2 = list(
   mutate(Rank = row_number(), Rank_diff = AVG - Rank) %>%
   filter(pFantasyPts >= 50)
 
-write_csv(marcel2, "C:/Users/sppap/Downloads/FantasyMarcel.csv")
-
-
 
 
 
